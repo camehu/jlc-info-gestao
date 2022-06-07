@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container-fluid" >
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">JLC Informática</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/usuarios" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/servicos" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Serviços</span>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+        <!--                        LOGIN LIST                          -->
+
+
+             <div class="container-fluid mt-5" >
+
+                      <p><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal"> Novo Usuário </button></p>
+                      <table class="table table-striped"  style="width: 60%;box-shadow: 2px 2px 5px #C0C0C0; ">
+                        <thead>
+                          <tr>
+                            <th>Codigo</th>
+                            <th>Usuario</th>
+                            <th>Senha</th>
+                              <th>Tipo</th>
+                              <th>Açoes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                              <td>john@example.com</td>
+                              <td><button type="button" class="btn btn-outline-secondary btn-sm"> Ver </button>
+                                  <button type="button" class="btn btn-outline-warning btn-sm"> Editar </button>
+                                  <button type="button" class="btn btn-outline-danger btn-sm"> Deletar </button>
+                              </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- The Modal  USUARIO-->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Novo Usuário</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="adding:1em;">
+          <form>
+                  <div class="row ">
+                    <div class="col-8">
+                      <input type="text" class="form-control" placeholder="Digite o Nome" name="nome">
+                    </div>
+                    <div class="col-4">
+                      <input type="password" class="form-control" placeholder="Digite a senha" name="pwd">
+                    </div>
+
+                 <div class="col-12" style="margin-top:1em;">
+                    <input type="password" class="form-control" placeholder="email" name="email">
+                    </div>
+
+                 <div class="col" style="margin-top:1em;" >
+                  <select class="form-select">
+                  <option>Tecnico</option>
+                  <option>Gerente</option>
+                  <option>Recepção</option>
+                  </select>
+
+                  </div>
+             </div>
+
+         <!-- Modal footer -->
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-secundary" data-bs-dismiss="modal">Close</button>
+              </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
