@@ -9,7 +9,7 @@ class Conexao:
         self.database = db
 
     def conn(self):
-        self.conex = mysql.connector.connect(user=self.user , senha=self.password, host=self.host, db=self.database)
+        self.conex = mysql.connector.connect(user=self.user , password=self.password, host=self.host, db=self.database)
         self.cur = self.conex.cursor()
 
     def logout(self):
