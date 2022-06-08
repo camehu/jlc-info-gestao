@@ -2,7 +2,7 @@ import mysql.connector
 
 
 class Conexao:
-    def __init__(self, host="localhost", user="root", pwd="", db="usuarios"):
+    def __init__(self, host="cc866a@us-cdbr-east-05.cleardb.net", user="bf52639806dbf1", pwd="a0cc866a", db="heroku_28ce16c0c087c86"):
         self.host = host
         self.user = user
         self.password = pwd
