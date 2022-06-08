@@ -33,11 +33,11 @@ async def login(request: Request, username: str = Form(), password: str = Form()
 
     conn = Conexao()
     conn.conn()
-    res = conn.pesquisar(f"SELECT `iduser`, `user`, `senha` FROM `login` WHERE user = '{username}' AND senha = '{password}' ")
+    res = conn.pesquisar(f"select iduser, usernome, senha FROM login WHERE usernome = '{username}' AND senha = '{password}' ")
     if not res:
-        return templates.TemplateResponse( "index.html", {"request" : request, 'resp': 0} )
+        return templates.TemplateResponse( "teste.html", {"request" : request, 'resp': 0} )
     else:
-        return templates.TemplateResponse( "dashboard.html", {"request" : request, 'resp': 1} )
+        return templates.TemplateResponse( "teste.html", {"request" : request, 'resp': 1} )
 
 if __name__ == '__mail__':
     app.rum()

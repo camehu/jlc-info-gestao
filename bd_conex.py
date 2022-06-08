@@ -2,14 +2,14 @@ import mysql.connector
 
 
 class Conexao:
-    def __init__(self, host="cc866a@us-cdbr-east-05.cleardb.net", user="bf52639806dbf1", pwd="a0cc866a", db="heroku_28ce16c0c087c86"):
-        self.host = host
+    def __init__(self, user="bf52639806dbf1", password="a0cc866a", host="us-cdbr-east-05.cleardb.net", db='heroku_28ce16c0c087c86'):
         self.user = user
-        self.password = pwd
+        self.password = password
+        self.host = host
         self.database = db
 
     def conn(self):
-        self.conex = mysql.connector.connect(host=self.host, user=self.user, db=self.database)
+        self.conex = mysql.connector.connect(user=self.user , senha=self.password, host=self.host, db=self.database)
         self.cur = self.conex.cursor()
 
     def logout(self):
