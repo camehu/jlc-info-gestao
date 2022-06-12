@@ -61,7 +61,7 @@ async def login(request: Request, username: str = Form(), password: str = Form()
 
 @app.get ( "/teste", response_class=HTMLResponse)
 async def teste(request: Request):
-   return templates.TemplateResponse( "error.html", {"request" : request} )
+   return templates.TemplateResponse( "teste.html", {"request" : request} )
 
 
 if __name__ == '__mail__':
