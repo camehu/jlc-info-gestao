@@ -60,8 +60,15 @@ async def login(request: Request, username: str = Form(), password: str = Form()
 
 
 @app.get ( "/teste", response_class=HTMLResponse)
-async def teste(request: Request):
-   return templates.TemplateResponse( "teste.html", {"request" : request} )
+async def teste(request: Request):    
+      try:
+        tkn = class_token.Token()
+        resp = tkn.decode()
+        return templates.TemplateResponse( "teste.html", {"request" : request, 'resp':resp} )
+    except:
+        return templates.TemplateResponse( "error.html", {"request" : request} )
+    
+   
 
 
 if __name__ == '__mail__':
