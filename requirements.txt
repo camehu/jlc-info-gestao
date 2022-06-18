@@ -29,3 +29,5 @@ urllib3==1.26.9
 uvicorn==0.17.6
 
 PyJWT~=2.4.0
+localStoragePy~=0.2.3
+localstorage~=0.1.0
